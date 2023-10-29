@@ -1,0 +1,26 @@
+def anagrams(s1, s2):
+  
+  dictionary1 = {}
+  dictionary2 = {}
+  
+  if len(s1) != len(s2):
+    return False
+  
+  for letter in s1:
+    if letter not in dictionary1:
+      dictionary1.update({letter: 1})
+    elif letter in dictionary1:
+      dictionary1[letter] += 1
+      
+  for letter in s2:
+    if letter not in dictionary2:
+      dictionary2.update({letter: 1})
+    elif letter in dictionary2:
+      dictionary2[letter] += 1
+      
+  if dictionary1 == dictionary2:
+    return True
+  else:
+    return False
+      
+    
