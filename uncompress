@@ -1,0 +1,19 @@
+def uncompress(s):
+  
+  output = ""
+  currentNumber = ""
+  
+  for character in s:
+    
+    if character.isdigit():
+      currentNumber = currentNumber + character
+      continue
+      
+    print(currentNumber)
+
+    output = output + (character * int(currentNumber))
+    
+    if character.isalpha():
+      currentNumber = ""
+  
+  return output
