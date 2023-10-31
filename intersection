@@ -1,0 +1,14 @@
+def intersection(a, b):
+  
+  intersection_list = []
+  
+  if a == b:
+    intersection_list = a
+    return intersection_list
+  else:
+    for num in a:
+      if num in b:
+        intersection_list.append(num)
+  
+  return intersection_list
+  
