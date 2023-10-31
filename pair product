@@ -1,0 +1,12 @@
+def pair_product(numbers, target_product):
+  
+  previous_products = {}
+  
+  for index, num in enumerate(numbers):
+    
+    complement = target_product / num
+    
+    if complement in previous_products:
+      return (index, previous_products[complement])
+    
+    previous_products[num] = index
