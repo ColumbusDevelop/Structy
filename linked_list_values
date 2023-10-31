@@ -1,0 +1,15 @@
+# class Node:
+#   def __init__(self, val):
+#     self.val = val
+#     self.next = None
+
+def linked_list_values(head):
+  
+  ll_values = []
+  
+  while head is not None:
+    print(head.val)
+    ll_values.append(head.val)
+    head = head.next
+    
+  return ll_values
