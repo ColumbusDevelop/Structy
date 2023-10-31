@@ -1,0 +1,8 @@
+def five_sort(nums):
+  
+  for index, num in enumerate(nums):
+    if num == 5:
+      nums.remove(num)
+      nums.append(num)
+                              
+  return nums
