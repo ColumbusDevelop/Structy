@@ -1,6 +1,10 @@
 def max_value(nums):
-  max = nums[0]
-  for number in range(len(nums)):
-    if nums[number] > max:
-      max = nums[number]
+  
+  max = -float('inf')
+  
+  for number in nums:
+    if number > max:
+      max = number
+      
   return max
+  
