@@ -1,20 +1,13 @@
+from math import sqrt, floor
+
 def is_prime(n):
   
-  counter = 0
-  
-  if n == 1:
+  if n < 2:
     return False
-  
-  for number in range(0, n + 1):
-    if number == 0:
-      continue
+
+  for number in range(2, floor(sqrt(n)) + 1):
     if n % number == 0:
-      counter = counter + 1
-      
-  print(counter)
-  
-  if counter < 3:
-    return True
-  elif counter >= 2:
-    return False
-      
+      return False
+    
+  return True
+    
