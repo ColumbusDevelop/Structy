@@ -22,3 +22,49 @@ def uncompress(s):
 
 ===
 
+def uncompress(s):
+  
+  output = ""
+  count = ""
+  
+  for character in s:
+    
+    if character.isnumeric():
+      count = count + character
+      
+    if character.isalpha():
+      output = output + (character * int(count))
+      count = ""
+      
+    
+    
+    
+  return output
+
+  # Time:O(n)
+  # Space: O(n)
+
+===
+
+def uncompress(s):
+  
+  output = ""
+  
+  i, j = 0, 0
+  
+  for char in s:
+    
+    if char.isnumeric() == True:
+      
+      j += 1
+      
+    if char.isalpha() == True:
+      
+      output = output + ( char * int(s[i:j]) )
+      j += 1
+      i = j
+        
+  return output
+
+# Time: O(n)
+# Space: O(n)
