@@ -17,5 +17,8 @@ def uncompress(s):
 
   return output
 
-  # Time: O()
-  # Space: O()
+  # Time: O(n^2)
+  # Space: O(n)
+
+===
+
