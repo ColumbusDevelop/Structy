@@ -1,19 +1,21 @@
 def uncompress(s):
   
   output = ""
-  currentNumber = ""
+  count = ""
   
   for character in s:
     
-    if character.isdigit():
-      currentNumber = currentNumber + character
-      continue
+    if character.isnumeric() == True:
       
-    print(currentNumber)
+      count = count + character
+      
+    if character.isalpha() == True:
+      
+      for number in range(int(count)):
+        output = output + character
+        count = ""
 
-    output = output + (character * int(currentNumber))
-    
-    if character.isalpha():
-      currentNumber = ""
-  
   return output
+
+  # Time: O()
+  # Space: O()
