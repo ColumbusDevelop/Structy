@@ -1,20 +1,26 @@
 def compress(s):
   
-  s = s + "!"
-  output = ""
+  s += '!'
   i = 0
   j = 0
+  output = ""
   
   while j < len(s):
-  
+    
     if s[i] == s[j]:
-      j = j + 1
+      j += 1
+      
     elif s[i] != s[j]:
-      if j - i > 1:
-        output = output + str(j - i) + s[i]
-        i = j
-      elif j - i == 1:
+      
+      if (j - i) == 1:
         output = output + s[i]
         i = j
-
+        
+      else:
+        output = output + str(j - i) + s[i]
+        i = j
+        
   return output
+
+  # Time: O(n)
+  # Space: O(n)
